@@ -14,6 +14,12 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <?php wp_body_open(); ?>
+    <?php
+        //Verifica compatibilidad con versiones anteriores de Wordpress
+        if (function_exists('wp_body_open')) {
+            wp_body_open();
+        }
+    ?>
+
     <header></header>
 
